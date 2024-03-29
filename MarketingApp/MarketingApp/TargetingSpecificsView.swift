@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct TargetingSpecificsView: View {
-    @State var listOfSelections = Set<String>()
-    var options: [String] = ["option1", "option2"]
+    @StateObject var viewModel = TargetingSpecificsViewModel(channels: MockDataModel.mockData)
     
     var body: some View {
         VStack {
-            Text("Selected: \(listOfSelections.description)")
+            Text("Selected: \(viewModel.listOfSelections.description)")
                 .padding()
 
-            List(options, id: \.self, selection: $listOfSelections) {
+            List(viewModel.targetingSpecifics, id: \.self, selection: $viewModel.listOfSelections) {
                         Text("\($0)")
                     }
                     .environment(\.editMode, .constant(EditMode.active))
@@ -26,10 +25,11 @@ struct TargetingSpecificsView: View {
             } label: {
                 Text("Next Step")
             }
+            .disabled(!viewModel.isButtonActive)
         }
     }
 }
 
 #Preview {
-    TargetingSpecificsView(listOfSelections: Set<String>())
+    TargetingSpecificsView()
 }

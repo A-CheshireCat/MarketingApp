@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ChannelModel {
+struct ChannelModel: Identifiable {
+    var id = UUID()
+    
     let name: String
     let targetingSpecifics: [String]
     let campaigns: [CampaignModel]

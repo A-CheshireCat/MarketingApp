@@ -15,6 +15,7 @@
 		96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */; };
 		96C7D7812BB6BF40004D14F6 /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */; };
 		96C7D7832BB6BFBC004D14F6 /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7822BB6BFBC004D14F6 /* ChannelModel.swift */; };
+		96C7D7852BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7842BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModel.swift; sourceTree = "<group>"; };
 		96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
 		96C7D7822BB6BFBC004D14F6 /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		96C7D7842BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetingSpecificsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,11 @@
 			children = (
 				963F1C182BB6A81700E810E9 /* MarketingAppApp.swift */,
 				963F1C1A2BB6A81700E810E9 /* ContentView.swift */,
+				96C7D77F2BB6BEF5004D14F6 /* Model */,
 				963F1C1C2BB6A81900E810E9 /* Assets.xcassets */,
 				963F1C1E2BB6A81900E810E9 /* Preview Content */,
 				96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */,
-				96C7D77F2BB6BEF5004D14F6 /* Model */,
+				96C7D7842BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -81,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */,
-				96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */,
 				96C7D7822BB6BFBC004D14F6 /* ChannelModel.swift */,
+				96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */,
+				96C7D7852BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift in Sources */,
 				96C7D7832BB6BFBC004D14F6 /* ChannelModel.swift in Sources */,
 				963F1C1B2BB6A81700E810E9 /* ContentView.swift in Sources */,
 				963F1C192BB6A81700E810E9 /* MarketingAppApp.swift in Sources */,
