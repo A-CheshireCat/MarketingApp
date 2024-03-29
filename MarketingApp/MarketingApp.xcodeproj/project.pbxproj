@@ -11,6 +11,7 @@
 		963F1C1B2BB6A81700E810E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963F1C1A2BB6A81700E810E9 /* ContentView.swift */; };
 		963F1C1D2BB6A81900E810E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F1C1C2BB6A81900E810E9 /* Assets.xcassets */; };
 		963F1C202BB6A81900E810E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */; };
+		96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		963F1C1A2BB6A81700E810E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		963F1C1C2BB6A81900E810E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetingSpecificsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				963F1C1A2BB6A81700E810E9 /* ContentView.swift */,
 				963F1C1C2BB6A81900E810E9 /* Assets.xcassets */,
 				963F1C1E2BB6A81900E810E9 /* Preview Content */,
+				96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */,
 				963F1C1B2BB6A81700E810E9 /* ContentView.swift in Sources */,
 				963F1C192BB6A81700E810E9 /* MarketingAppApp.swift in Sources */,
 			);
