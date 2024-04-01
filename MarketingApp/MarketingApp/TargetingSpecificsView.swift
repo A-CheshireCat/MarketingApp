@@ -11,22 +11,25 @@ struct TargetingSpecificsView: View {
     @StateObject var viewModel = TargetingSpecificsViewModel(channels: MockDataModel.mockData)
     
     var body: some View {
-        VStack {
-            Text("Selected: \(viewModel.listOfSelections.description)")
-                .padding()
-
-            List(viewModel.targetingSpecifics, id: \.self, selection: $viewModel.listOfSelections) {
-                        Text("\($0)")
+        NavigationStack{
+            VStack {                
+                List(viewModel.targetingSpecifics, id: \.self, selection: $viewModel.listOfSelections) {
+                    Text("\($0)")
+                }
+                .environment(\.editMode, .constant(EditMode.active))
+                
+                Button {
+                    print("Button Pressed")
+                } label: {
+                    NavigationLink(destination: ChannelsView(viewModel: ChannelsViewModel(channels: viewModel.findChannelsForSelection()))) {
+                        Text(viewModel.buttonText)
                     }
-                    .environment(\.editMode, .constant(EditMode.active))
-            
-            Button {
-                print("Button Pressed")
-            } label: {
-                Text("Next Step")
+                }
+                .disabled(!viewModel.isButtonActive)
             }
-            .disabled(!viewModel.isButtonActive)
+            .navigationTitle("Targeting Specifics")
         }
+        
     }
 }
 

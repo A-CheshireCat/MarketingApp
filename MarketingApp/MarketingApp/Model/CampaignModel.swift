@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CampaignModel {
+struct CampaignModel: Hashable {
     let monthlyFee: Int
     let details: [String]
     

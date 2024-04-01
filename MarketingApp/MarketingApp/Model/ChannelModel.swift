@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChannelModel: Identifiable {
+struct ChannelModel: Identifiable, Hashable {
     var id = UUID()
     
     let name: String
