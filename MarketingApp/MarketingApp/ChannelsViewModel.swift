@@ -15,8 +15,14 @@ class ChannelsViewModel: ObservableObject {
         }
     }
 
+    @Published var detailsShowing = false
     @Published var isButtonActive = false
     @Published var buttonText = "No campaigns"
+    @Published var presentedChannel: ChannelModel? {
+        didSet {
+            detailsShowing = true
+        }
+    }
         
     init(channels: [ChannelModel]) {
         channelsFromSelection = channels

@@ -12,7 +12,7 @@ struct ChannelModel: Identifiable, Hashable {
     
     let name: String
     let targetingSpecifics: [String]
-    let campaigns: [CampaignModel]
+    var campaigns: [CampaignModel]
     
     var isCampaignSelected: Bool = false
 }

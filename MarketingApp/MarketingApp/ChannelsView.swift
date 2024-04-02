@@ -11,13 +11,21 @@ struct ChannelsView: View {
     @StateObject var viewModel: ChannelsViewModel
     
     var body: some View {
-        List(viewModel.channelsFromSelection, id: \.self) { channel in 
-            VStack {
-                Text(channel.name)
-                Text(channel.isCampaignSelected ? "Campaign Selected" : "")
-                    .foregroundStyle(.red)
+        List(viewModel.channelsFromSelection, id: \.self) { channel in
+            Button{
+                viewModel.presentedChannel = channel
+            } label:{
+                VStack {
+                    Text(channel.name)
+                    Text(channel.isCampaignSelected ? "Campaign Selected" : "")
+                        .foregroundStyle(.red)
+                }
             }
         }
+        .sheet(isPresented: $viewModel.detailsShowing) {
+            ChannelDetailsView(viewModel: ChannelDetailsViewModel(channel: viewModel.presentedChannel!))
+        }
+        
         Button {
             print("Button Pressed")
         } label: {
