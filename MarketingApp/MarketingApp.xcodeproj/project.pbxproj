@@ -13,7 +13,6 @@
 		963F1C202BB6A81900E810E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */; };
 		96A1F40D2BBAD863000090DE /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */; };
 		96A1F40F2BBAF479000090DE /* ChannelDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */; };
-		96A1F4112BBC18C0000090DE /* ChannelDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4102BBC18C0000090DE /* ChannelDetailsViewModel.swift */; };
 		96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */; };
 		96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */; };
 		96C7D7812BB6BF40004D14F6 /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */; };
@@ -30,7 +29,6 @@
 		963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
 		96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsView.swift; sourceTree = "<group>"; };
-		96A1F4102BBC18C0000090DE /* ChannelDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsViewModel.swift; sourceTree = "<group>"; };
 		96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetingSpecificsView.swift; sourceTree = "<group>"; };
 		96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModel.swift; sourceTree = "<group>"; };
 		96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				96C7D7862BBAD284004D14F6 /* ChannelsView.swift */,
 				96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */,
 				96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */,
-				96A1F4102BBC18C0000090DE /* ChannelDetailsViewModel.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -178,7 +175,6 @@
 				96A1F40D2BBAD863000090DE /* ChannelsViewModel.swift in Sources */,
 				963F1C1B2BB6A81700E810E9 /* ContentView.swift in Sources */,
 				96C7D7872BBAD284004D14F6 /* ChannelsView.swift in Sources */,
-				96A1F4112BBC18C0000090DE /* ChannelDetailsViewModel.swift in Sources */,
 				963F1C192BB6A81700E810E9 /* MarketingAppApp.swift in Sources */,
 				96A1F40F2BBAF479000090DE /* ChannelDetailsView.swift in Sources */,
 				96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */,

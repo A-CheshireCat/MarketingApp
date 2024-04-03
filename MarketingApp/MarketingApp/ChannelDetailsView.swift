@@ -8,33 +8,38 @@
 import SwiftUI
 
 struct ChannelDetailsView: View {
-    @Environment(\.dismiss) private var dismiss
-
-    @StateObject var viewModel: ChannelDetailsViewModel
+    @Binding var detailsShowing: Bool
+    @Binding var channel: ChannelModel
             
     var body: some View {
         HStack{
             Spacer()
             Button {
-                dismiss()
+                detailsShowing = false
             } label: {
                 Text("Close")
                     .padding()
             }
         }
         
-        Text(viewModel.channel.name)
+        Text(channel.name)
             .font(.title)
         
-        Picker("Campaign selected", selection: $viewModel.selectionIndex) {
-            ForEach(viewModel.channel.campaigns.indices, id: \.self) { index in
-                Text("\(viewModel.channel.campaigns[index].monthlyFee) euro / month")
+        Picker("Campaign selected", selection: $channel.selectedCampaignIndex) {
+            Text("None").tag(channel.campaigns.count)
+
+            ForEach(channel.campaigns.indices, id: \.self) { index in
+                Text("\(channel.campaigns[index].monthlyFee) euro / month")
             }
-            Text("None").tag(viewModel.channel.campaigns.count)
+        }
+        .onChange(of: channel.selectedCampaignIndex) { _ in
+            for index in 0..<channel.campaigns.count {
+                channel.campaigns[index].isSelected = channel.selectedCampaignIndex == index ? true : false
+            }
         }
             
         List {
-            ForEach(viewModel.channel.campaigns, id: \.self) { campaign in
+            ForEach(channel.campaigns, id: \.self) { campaign in
                 CampaignCardView(campaign: campaign)
                     .background(campaign.isSelected ? .green : .gray)
             }
@@ -45,7 +50,8 @@ struct ChannelDetailsView: View {
 }
 
 #Preview {
-    ChannelDetailsView(viewModel: ChannelDetailsViewModel(channel: MockDataModel.mockData[1]))
+    ChannelDetailsView(detailsShowing: .constant(true),
+                       channel: .constant(MockDataModel.mockData[0]))
 }
 
 struct CampaignCardView: View {

@@ -14,5 +14,5 @@ struct ChannelModel: Identifiable, Hashable {
     let targetingSpecifics: [String]
     var campaigns: [CampaignModel]
     
-    var isCampaignSelected: Bool = false
+    var selectedCampaignIndex: Int = Int.max
 }

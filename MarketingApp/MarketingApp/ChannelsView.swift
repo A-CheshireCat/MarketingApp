@@ -13,17 +13,18 @@ struct ChannelsView: View {
     var body: some View {
         List(viewModel.channelsFromSelection, id: \.self) { channel in
             Button{
-                viewModel.presentedChannel = channel
+                viewModel.presentedChannelIndex = viewModel.channelsFromSelection.firstIndex(where: {$0.id == channel.id}) ?? 0
             } label:{
-                VStack {
+                VStack(alignment: .leading) {
                     Text(channel.name)
-                    Text(channel.isCampaignSelected ? "Campaign Selected" : "")
+                    Text(channel.selectedCampaignIndex < channel.campaigns.count ? "Campaign Selected" : "")
                         .foregroundStyle(.red)
                 }
             }
         }
         .sheet(isPresented: $viewModel.detailsShowing) {
-            ChannelDetailsView(viewModel: ChannelDetailsViewModel(channel: viewModel.presentedChannel!))
+            ChannelDetailsView(detailsShowing: $viewModel.detailsShowing,
+                               channel: $viewModel.channelsFromSelection[viewModel.presentedChannelIndex])
         }
         
         Button {
@@ -31,7 +32,7 @@ struct ChannelsView: View {
         } label: {
             Text(viewModel.buttonText)
         }
-        .disabled(false)
+        .disabled(!viewModel.isButtonActive)
     }
 }
 

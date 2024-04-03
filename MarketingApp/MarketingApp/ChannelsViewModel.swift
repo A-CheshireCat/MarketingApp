@@ -8,8 +8,8 @@
 import Foundation
 
 class ChannelsViewModel: ObservableObject {
-    var channelsFromSelection: [ChannelModel] {
-        didSet {
+    @Published var channelsFromSelection: [ChannelModel] {
+        didSet{
             buttonText = hasSelectedCampaigns() ? "Review selections" : "No campaigns selected"
             isButtonActive = hasSelectedCampaigns() ? true : false
         }
@@ -18,7 +18,7 @@ class ChannelsViewModel: ObservableObject {
     @Published var detailsShowing = false
     @Published var isButtonActive = false
     @Published var buttonText = "No campaigns"
-    @Published var presentedChannel: ChannelModel? {
+    @Published var presentedChannelIndex: Int = 0 {
         didSet {
             detailsShowing = true
         }
@@ -32,7 +32,7 @@ class ChannelsViewModel: ObservableObject {
         var hasSelectedCampaigns = false
         
         channelsFromSelection.forEach {
-            if $0.isCampaignSelected {
+            if $0.selectedCampaignIndex < $0.campaigns.count {
                 hasSelectedCampaigns = true
                 return
             }
