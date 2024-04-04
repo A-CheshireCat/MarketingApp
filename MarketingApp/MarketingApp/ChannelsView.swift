@@ -27,12 +27,12 @@ struct ChannelsView: View {
                                channel: $viewModel.channelsFromSelection[viewModel.presentedChannelIndex])
         }
         
-        Button {
-            print("Button Pressed")
-        } label: {
+        NavigationLink(destination: ReviewEmailView(viewModel: ReviewEmailViewModel(selectedChannels: viewModel.getChannelsWithSelections()))) {
             Text(viewModel.buttonText)
         }
         .disabled(!viewModel.isButtonActive)
+        
+        .navigationTitle("Channels")
     }
 }
 

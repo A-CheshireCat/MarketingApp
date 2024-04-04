@@ -40,4 +40,18 @@ class ChannelsViewModel: ObservableObject {
         
         return hasSelectedCampaigns
     }
+    
+    func getChannelsWithSelections() -> [ChannelModel] {
+        var selections = [ChannelModel]()
+        
+        channelsFromSelection.forEach {
+            if $0.selectedCampaignIndex < $0.campaigns.count {
+                selections.append(ChannelModel.init(name: $0.name,
+                                                    targetingSpecifics: $0.targetingSpecifics,
+                                                    campaigns: [$0.campaigns[$0.selectedCampaignIndex]]))
+            }
+        }
+        
+        return selections
+    }
 }

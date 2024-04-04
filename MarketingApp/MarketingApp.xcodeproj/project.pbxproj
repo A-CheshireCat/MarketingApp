@@ -13,6 +13,9 @@
 		963F1C202BB6A81900E810E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */; };
 		96A1F40D2BBAD863000090DE /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */; };
 		96A1F40F2BBAF479000090DE /* ChannelDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */; };
+		96A1F4132BBEA338000090DE /* ReviewEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4122BBEA338000090DE /* ReviewEmailView.swift */; };
+		96A1F4152BBEA5EB000090DE /* CampaignCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */; };
+		96A1F4172BBF194C000090DE /* ReviewEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */; };
 		96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */; };
 		96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */; };
 		96C7D7812BB6BF40004D14F6 /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */; };
@@ -29,6 +32,9 @@
 		963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
 		96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailsView.swift; sourceTree = "<group>"; };
+		96A1F4122BBEA338000090DE /* ReviewEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmailView.swift; sourceTree = "<group>"; };
+		96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardView.swift; sourceTree = "<group>"; };
+		96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmailViewModel.swift; sourceTree = "<group>"; };
 		96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetingSpecificsView.swift; sourceTree = "<group>"; };
 		96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModel.swift; sourceTree = "<group>"; };
 		96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
@@ -77,6 +83,9 @@
 				96C7D7862BBAD284004D14F6 /* ChannelsView.swift */,
 				96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */,
 				96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */,
+				96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */,
+				96A1F4122BBEA338000090DE /* ReviewEmailView.swift */,
+				96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -171,8 +180,11 @@
 			files = (
 				96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */,
 				96C7D7852BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift in Sources */,
+				96A1F4172BBF194C000090DE /* ReviewEmailViewModel.swift in Sources */,
+				96A1F4152BBEA5EB000090DE /* CampaignCardView.swift in Sources */,
 				96C7D7832BB6BFBC004D14F6 /* ChannelModel.swift in Sources */,
 				96A1F40D2BBAD863000090DE /* ChannelsViewModel.swift in Sources */,
+				96A1F4132BBEA338000090DE /* ReviewEmailView.swift in Sources */,
 				963F1C1B2BB6A81700E810E9 /* ContentView.swift in Sources */,
 				96C7D7872BBAD284004D14F6 /* ChannelsView.swift in Sources */,
 				963F1C192BB6A81700E810E9 /* MarketingAppApp.swift in Sources */,
