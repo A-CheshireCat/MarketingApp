@@ -12,7 +12,7 @@ struct ReviewEmailView: View {
     @StateObject var viewModel: ReviewEmailViewModel
     
     var body: some View {
-        //Testing, to remove later
+        //TODO: Testing, to remove later
         if viewModel.result != nil {
             Text("Result: \(String(describing: viewModel.result))")
                 .lineLimit(nil)
@@ -36,7 +36,11 @@ struct ReviewEmailView: View {
         .disabled(!MFMailComposeViewController.canSendMail())
         
         .sheet(isPresented: $viewModel.isShowingMailView) {
-            SendMailView(isShowing: $viewModel.isShowingMailView, result: $viewModel.result)
+            SendMailView(isShowing: $viewModel.isShowingMailView,
+                         result: $viewModel.result,
+                         emailTitle: viewModel.emailTitle,
+                         emailBody: viewModel.emailBody,
+                         recipients: viewModel.recipients)
         }
         
         .navigationTitle("Review")
