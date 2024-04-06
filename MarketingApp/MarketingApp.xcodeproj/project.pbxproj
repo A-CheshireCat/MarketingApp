@@ -16,6 +16,7 @@
 		96A1F4132BBEA338000090DE /* ReviewEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4122BBEA338000090DE /* ReviewEmailView.swift */; };
 		96A1F4152BBEA5EB000090DE /* CampaignCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */; };
 		96A1F4172BBF194C000090DE /* ReviewEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */; };
+		96A1F4192BC16206000090DE /* SendEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A1F4182BC16206000090DE /* SendEmailView.swift */; };
 		96C7D77C2BB6B612004D14F6 /* TargetingSpecificsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */; };
 		96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */; };
 		96C7D7812BB6BF40004D14F6 /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */; };
@@ -35,6 +36,7 @@
 		96A1F4122BBEA338000090DE /* ReviewEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmailView.swift; sourceTree = "<group>"; };
 		96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignCardView.swift; sourceTree = "<group>"; };
 		96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEmailViewModel.swift; sourceTree = "<group>"; };
+		96A1F4182BC16206000090DE /* SendEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailView.swift; sourceTree = "<group>"; };
 		96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetingSpecificsView.swift; sourceTree = "<group>"; };
 		96C7D77D2BB6BED7004D14F6 /* MockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModel.swift; sourceTree = "<group>"; };
 		96C7D7802BB6BF40004D14F6 /* CampaignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */,
 				96A1F4122BBEA338000090DE /* ReviewEmailView.swift */,
 				96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */,
+				96A1F4182BC16206000090DE /* SendEmailView.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				96C7D7872BBAD284004D14F6 /* ChannelsView.swift in Sources */,
 				963F1C192BB6A81700E810E9 /* MarketingAppApp.swift in Sources */,
 				96A1F40F2BBAF479000090DE /* ChannelDetailsView.swift in Sources */,
+				96A1F4192BC16206000090DE /* SendEmailView.swift in Sources */,
 				96C7D77E2BB6BED7004D14F6 /* MockDataModel.swift in Sources */,
 				96C7D7812BB6BF40004D14F6 /* CampaignModel.swift in Sources */,
 			);
