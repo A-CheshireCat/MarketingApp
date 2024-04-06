@@ -16,9 +16,10 @@ struct TargetingSpecificsView: View {
                 List(viewModel.targetingSpecifics, id: \.self, selection: $viewModel.listOfSelections) {
                     Text("\($0)")
                 }
+                .listStyle(.insetGrouped)
                 .environment(\.editMode, .constant(EditMode.active))
                 
-                NavigationLink(destination: ChannelsView(viewModel: ChannelsViewModel(channels: viewModel.findChannelsForSelection()))) {
+                NavigationLink(destination: ChannelsView(viewModel: ChannelsViewModel(channels: viewModel.getChannelsForSelection()))) {
                     Text(viewModel.buttonText)
                 }
                 .disabled(!viewModel.isButtonActive)

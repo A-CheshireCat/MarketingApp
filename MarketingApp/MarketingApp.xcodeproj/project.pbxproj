@@ -78,17 +78,9 @@
 				963F1C182BB6A81700E810E9 /* MarketingAppApp.swift */,
 				963F1C1A2BB6A81700E810E9 /* ContentView.swift */,
 				96C7D77F2BB6BEF5004D14F6 /* Model */,
+				96A1F41A2BC19455000090DE /* Views */,
 				963F1C1C2BB6A81900E810E9 /* Assets.xcassets */,
 				963F1C1E2BB6A81900E810E9 /* Preview Content */,
-				96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */,
-				96C7D7842BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift */,
-				96C7D7862BBAD284004D14F6 /* ChannelsView.swift */,
-				96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */,
-				96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */,
-				96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */,
-				96A1F4122BBEA338000090DE /* ReviewEmailView.swift */,
-				96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */,
-				96A1F4182BC16206000090DE /* SendEmailView.swift */,
 			);
 			path = MarketingApp;
 			sourceTree = "<group>";
@@ -99,6 +91,54 @@
 				963F1C1F2BB6A81900E810E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96A1F41A2BC19455000090DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96A1F41B2BC19472000090DE /* Screens */,
+				96A1F4142BBEA5EB000090DE /* CampaignCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96A1F41B2BC19472000090DE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				96A1F41E2BC1953E000090DE /* EmailReview&Send */,
+				96A1F41D2BC194E2000090DE /* ChannelsListing */,
+				96A1F41C2BC194C1000090DE /* TargetingSpecifics */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		96A1F41C2BC194C1000090DE /* TargetingSpecifics */ = {
+			isa = PBXGroup;
+			children = (
+				96C7D77B2BB6B612004D14F6 /* TargetingSpecificsView.swift */,
+				96C7D7842BB6D01A004D14F6 /* TargetingSpecificsViewModel.swift */,
+			);
+			path = TargetingSpecifics;
+			sourceTree = "<group>";
+		};
+		96A1F41D2BC194E2000090DE /* ChannelsListing */ = {
+			isa = PBXGroup;
+			children = (
+				96C7D7862BBAD284004D14F6 /* ChannelsView.swift */,
+				96A1F40C2BBAD863000090DE /* ChannelsViewModel.swift */,
+				96A1F40E2BBAF479000090DE /* ChannelDetailsView.swift */,
+			);
+			path = ChannelsListing;
+			sourceTree = "<group>";
+		};
+		96A1F41E2BC1953E000090DE /* EmailReview&Send */ = {
+			isa = PBXGroup;
+			children = (
+				96A1F4122BBEA338000090DE /* ReviewEmailView.swift */,
+				96A1F4162BBF194C000090DE /* ReviewEmailViewModel.swift */,
+				96A1F4182BC16206000090DE /* SendEmailView.swift */,
+			);
+			path = "EmailReview&Send";
 			sourceTree = "<group>";
 		};
 		96C7D77F2BB6BEF5004D14F6 /* Model */ = {

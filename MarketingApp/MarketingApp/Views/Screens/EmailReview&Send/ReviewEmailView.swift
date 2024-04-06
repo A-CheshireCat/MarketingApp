@@ -18,22 +18,21 @@ struct ReviewEmailView: View {
                 .lineLimit(nil)
         }
         //------------------------
-        List {
-            ForEach(viewModel.selectedChannels, id: \.self){ channel in
-                Section(channel.name, content: {
-                    CampaignCardView(campaign: channel.campaigns[0])
-                        .background(.green)
-                })
-            }
+        
+        List(viewModel.selectedChannels, id: \.self) { channel in
+            Section(channel.name, content: {
+                CampaignCardView(campaign: channel.campaigns[0])
+                    .background(.green)
+            })
         }
         .listStyle(.insetGrouped)
         
         Button {
             viewModel.isShowingMailView.toggle()
         } label: {
-            Text(MFMailComposeViewController.canSendMail() ? "Send Email" : "Can't send emails from this device")
+            Text(viewModel.buttonText)
         }
-        .disabled(!MFMailComposeViewController.canSendMail())
+        .disabled(!viewModel.isButtonActive)
         
         .sheet(isPresented: $viewModel.isShowingMailView) {
             SendMailView(isShowing: $viewModel.isShowingMailView,

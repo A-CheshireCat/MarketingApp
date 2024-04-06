@@ -22,12 +22,13 @@ struct ChannelsView: View {
                 }
             }
         }
+        .listStyle(.insetGrouped)
         .sheet(isPresented: $viewModel.detailsShowing) {
             ChannelDetailsView(detailsShowing: $viewModel.detailsShowing,
                                channel: $viewModel.channelsFromSelection[viewModel.presentedChannelIndex])
         }
         
-        NavigationLink(destination: ReviewEmailView(viewModel: ReviewEmailViewModel(selectedChannels: viewModel.getChannelsWithSelections()))) {
+        NavigationLink(destination: ReviewEmailView(viewModel: ReviewEmailViewModel(selectedChannels: viewModel.getChannelsWithSelectedCampaigns()))) {
             Text(viewModel.buttonText)
         }
         .disabled(!viewModel.isButtonActive)

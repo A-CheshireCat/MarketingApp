@@ -10,6 +10,10 @@ import MessageUI
 
 class ReviewEmailViewModel: ObservableObject {
     var selectedChannels: [ChannelModel]
+    var buttonText: String {
+        MFMailComposeViewController.canSendMail() ? "Send Email" : "Can't send emails from this device"
+    }
+    var isButtonActive = MFMailComposeViewController.canSendMail()
     var emailTitle = "Selected Campaigns"
     var emailBody: String {
         var bodyText = "Your selected campaigns are: \n\n"
@@ -28,6 +32,7 @@ class ReviewEmailViewModel: ObservableObject {
     
     @Published var isShowingMailView = false
     @Published var result: Result<MFMailComposeResult, Error>? = nil
+
 
     init(selectedChannels: [ChannelModel]) {
         self.selectedChannels = selectedChannels

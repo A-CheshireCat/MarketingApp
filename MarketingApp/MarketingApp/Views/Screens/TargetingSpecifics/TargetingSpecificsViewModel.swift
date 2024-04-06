@@ -10,22 +10,15 @@ import Foundation
 class TargetingSpecificsViewModel: ObservableObject {
     var channels: [ChannelModel] {
         didSet {
-            targetingSpecifics = {
-                var targetingSpecifics = [String]()
-                channels.forEach { channel in
-                    targetingSpecifics.append(contentsOf: channel.targetingSpecifics)
-                }
-                
-                return Array(Set(targetingSpecifics))
-            }()
+            targetingSpecifics = getAllTargetingSpecifics()
         }
     }
     
     @Published var targetingSpecifics = [String]()
     @Published var listOfSelections = Set<String>() {
         didSet {
-            buttonText = findChannelsForSelection().isEmpty ? "No matching results" : "Continue"
-            isButtonActive = findChannelsForSelection().isEmpty ? false : true
+            buttonText = getChannelsForSelection().isEmpty ? "No matching results" : "Continue"
+            isButtonActive = getChannelsForSelection().isEmpty ? false : true
         }
     }
     @Published var isButtonActive = false
@@ -34,17 +27,10 @@ class TargetingSpecificsViewModel: ObservableObject {
     init(channels: [ChannelModel]) {
         self.channels = channels
         
-        targetingSpecifics = {
-            var targetingSpecifics = [String]()
-            channels.forEach { channel in
-                targetingSpecifics.append(contentsOf: channel.targetingSpecifics)
-            }
-            
-            return Array(Set(targetingSpecifics))
-        }()
+        targetingSpecifics = getAllTargetingSpecifics()
     }
     
-    func findChannelsForSelection() -> [ChannelModel] {
+    func getChannelsForSelection() -> [ChannelModel] {
         var channelsForSelection = [ChannelModel]()
 
         guard !listOfSelections.isEmpty else { return channelsForSelection }
@@ -56,5 +42,15 @@ class TargetingSpecificsViewModel: ObservableObject {
         }
         
         return channelsForSelection
+    }
+    
+    func getAllTargetingSpecifics() -> [String] {
+        var targetingSpecifics = [String]()
+        
+        channels.forEach { channel in
+            targetingSpecifics.append(contentsOf: channel.targetingSpecifics)
+        }
+        
+        return Array(Set(targetingSpecifics)).sorted { $0.lowercased() < $1.lowercased() }
     }
 }

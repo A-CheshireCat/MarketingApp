@@ -29,7 +29,7 @@ struct ChannelDetailsView: View {
             Text("None").tag(channel.campaigns.count)
 
             ForEach(channel.campaigns.indices, id: \.self) { index in
-                Text("\(channel.campaigns[index].monthlyFee) euro / month")
+                Text("\(channel.campaigns[index].monthlyFee) euro / month").tag(index)
             }
         }
         .onChange(of: channel.selectedCampaignIndex) { _ in

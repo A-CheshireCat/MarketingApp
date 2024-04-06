@@ -41,7 +41,7 @@ class ChannelsViewModel: ObservableObject {
         return hasSelectedCampaigns
     }
     
-    func getChannelsWithSelections() -> [ChannelModel] {
+    func getChannelsWithSelectedCampaigns() -> [ChannelModel] {
         var selections = [ChannelModel]()
         
         channelsFromSelection.forEach {
