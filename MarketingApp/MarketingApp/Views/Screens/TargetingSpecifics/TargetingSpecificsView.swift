@@ -22,6 +22,7 @@ struct TargetingSpecificsView: View {
                 NavigationLink(destination: ChannelsView(viewModel: ChannelsViewModel(channels: viewModel.getChannelsForSelection()))) {
                     Text(viewModel.buttonText)
                 }
+                .padding()
                 .disabled(!viewModel.isButtonActive)
             }
             

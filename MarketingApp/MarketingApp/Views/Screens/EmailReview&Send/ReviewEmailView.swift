@@ -12,13 +12,6 @@ struct ReviewEmailView: View {
     @StateObject var viewModel: ReviewEmailViewModel
     
     var body: some View {
-        //TODO: Testing, to remove later
-        if viewModel.result != nil {
-            Text("Result: \(String(describing: viewModel.result))")
-                .lineLimit(nil)
-        }
-        //------------------------
-        
         List(viewModel.selectedChannels, id: \.self) { channel in
             Section(channel.name, content: {
                 CampaignCardView(campaign: channel.campaigns[0])
@@ -33,6 +26,7 @@ struct ReviewEmailView: View {
             Text(viewModel.buttonText)
         }
         .disabled(!viewModel.isButtonActive)
+        .padding()
         
         .sheet(isPresented: $viewModel.isShowingMailView) {
             SendMailView(isShowing: $viewModel.isShowingMailView,

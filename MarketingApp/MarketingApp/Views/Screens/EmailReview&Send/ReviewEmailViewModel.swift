@@ -16,15 +16,15 @@ class ReviewEmailViewModel: ObservableObject {
     var isButtonActive = MFMailComposeViewController.canSendMail()
     var emailTitle = "Selected Campaigns"
     var emailBody: String {
-        var bodyText = "Your selected campaigns are: \n\n"
+        var bodyText = "Your selected campaigns are: <br><br>"
         selectedChannels.forEach { channel in
-            bodyText += channel.name + "\n"
-            bodyText += "\(channel.campaigns[0].monthlyFee)\n"
+            bodyText += channel.name + "<br>"
+            bodyText += "\(channel.campaigns[0].monthlyFee) euro / month<br>"
 
             channel.campaigns[0].details.forEach { detail in
-                bodyText += detail + "\n"
+                bodyText += detail + "<br>"
             }
-            bodyText += "\n"
+            bodyText += "<br>"
         }
         return bodyText
     }

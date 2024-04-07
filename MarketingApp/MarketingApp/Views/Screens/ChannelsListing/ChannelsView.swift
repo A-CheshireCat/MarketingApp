@@ -31,6 +31,7 @@ struct ChannelsView: View {
         NavigationLink(destination: ReviewEmailView(viewModel: ReviewEmailViewModel(selectedChannels: viewModel.getChannelsWithSelectedCampaigns()))) {
             Text(viewModel.buttonText)
         }
+        .padding()
         .disabled(!viewModel.isButtonActive)
         
         .navigationTitle("Channels")
