@@ -12,4 +12,19 @@ struct CampaignModel: Hashable {
     let details: [String]
     
     var isSelected: Bool = false
+    
+    init(monthlyFee: Int, details: [String]) {
+        self.monthlyFee = monthlyFee
+        self.details = details
+    }
+    
+    init(responseCampaign: ResponseCampaign) {
+        monthlyFee = responseCampaign.monthlyFee
+        details = responseCampaign.details
+    }
+}
+
+struct ResponseCampaign: Decodable {
+    let monthlyFee: Int
+    let details: [String]
 }

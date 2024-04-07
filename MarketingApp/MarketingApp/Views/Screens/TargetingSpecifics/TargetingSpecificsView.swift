@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TargetingSpecificsView: View {
-    @StateObject var viewModel = TargetingSpecificsViewModel(channels: MockDataModel.mockData)
+    @StateObject var viewModel = TargetingSpecificsViewModel()
     
     var body: some View {
         NavigationStack {
@@ -26,6 +26,9 @@ struct TargetingSpecificsView: View {
             }
             
             .navigationTitle("Targeting Specifics")
+        }
+        .onAppear {
+            viewModel.downloadChannels()
         }
     }
 }
